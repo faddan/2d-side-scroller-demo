@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 382382966}
   - component: {fileID: 382382965}
   - component: {fileID: 382382964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlowFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 690966914}
   - component: {fileID: 690966913}
   - component: {fileID: 690966912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 842143421}
   - component: {fileID: 842143420}
   - component: {fileID: 842143419}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlipperyFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,6 +498,7 @@ GameObject:
   - component: {fileID: 1730129846}
   - component: {fileID: 1730129849}
   - component: {fileID: 1730129850}
+  - component: {fileID: 1730129851}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -582,7 +583,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1730129845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.51, y: -2.51, z: 0}
+  m_LocalPosition: {x: -3.43, y: -2.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -623,3 +624,33 @@ MonoBehaviour:
   maxSpeed: 5
   jumpForce: 10
   rb2d: {fileID: 1730129849}
+  groundDetectTrigger: {fileID: 1730129851}
+  groundContactFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 256
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+--- !u!58 &1730129851
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1730129845}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.24}
+  serializedVersion: 2
+  m_Radius: 0.38
