@@ -514,7 +514,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1730129845}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: b31996f29d5236642b17b566260cf9c6, type: 2}
+  m_Material: {fileID: 6200000, guid: c9ca89cb396d52e4585720e9166c9e39, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -620,10 +620,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46f0931025ce8dc439784227a934d30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accelerationForce: 40
+  accelerationForce: 20
   maxSpeed: 5
   jumpForce: 10
   rb2d: {fileID: 1730129849}
+  playerGroundCollider: {fileID: 1730129846}
+  playerMovingPhysicsMaterial: {fileID: 6200000, guid: a273267b8a25a7047a7068e06e200ecd,
+    type: 2}
+  playerStoppingPhysicsMaterial: {fileID: 6200000, guid: c9ca89cb396d52e4585720e9166c9e39,
+    type: 2}
   groundDetectTrigger: {fileID: 1730129851}
   groundContactFilter:
     useTriggers: 0
