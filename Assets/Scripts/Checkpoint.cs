@@ -2,21 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hazard : MonoBehaviour
+public class Checkpoint : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player entered hazard.");
+            Debug.Log("Player entering the checkpoint.");
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
-            player.Respawn();
+            player.SetCurrentCheckpoint(this);
         }
-        else
-        {
-            Debug.Log("Something other than the player entered the hazard");
-        }
-      
     }
 
 }
